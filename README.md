@@ -35,7 +35,7 @@ contains also rows with NAs (or maybe zeros) feature measures.
 
 **Activity** contains codes (1-6).
 
-**Action:** Activities *for each observation* are combined from  files "y_train.txt" and "y_test.txt". These measurements are given **descriptive activity names**, that is, names are merged from 'activity_labels'.
+**Action:** Activities *for each observation* are combined from  files "y_train.txt" and "y_test.txt". These activitiess are given **descriptive activity values** (). Technically, the values are merged from 'activity_labels' (and the activity code is dropped).
 
 
 ## **Feature data** (measures) into data frame 'X_both'
