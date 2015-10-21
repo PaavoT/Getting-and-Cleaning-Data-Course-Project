@@ -105,7 +105,7 @@ Feature data *for each observation* is constructed by combining files **"X_train
 
 **Descriptive variable names** for Features are read from **"features.txt"** and processed to contain only alpha-numeric characters (to be better used as R variables). All columns ('V1' - 'V561') are renamed to the values in "features.txt".
 
-=> Read files into Data frames 'subject_both', 'y_both' and 'X_both'
+**=> Read files into Data frames 'subject_both', 'y_both' and 'X_both'**
 
      !---!      !---!      !--------------------------------------------------------!
      ! y !      ! s !      !  X_both                                    561 columns !
@@ -158,7 +158,7 @@ In this phase we **drop many columns** (measures) from the Feature data **'X_bot
 We leave only the measurements on the mean and standard deviation for each measurement. 
 This is interpreted as follows: keep all variables whose name contains either 'mean' or 'std'. 
 
-=> Change Data frame 'X_both'
+**=> Change Data frame 'X_both'**
 
      !---!      !---!      !----------------------!
      ! y !      ! s !      !  X_both   79 columns !
@@ -215,7 +215,7 @@ In this phase we finalize the data set by adding columns 'activity' and 'subject
 
 Technically, we combine **Activity**, **Subject** and **Feature data** into a single data frame 'yX_both' (and rename one column to a descriptive variable name 'activity').
 
-=> Merge 3 Data frames into Data frame 'yX_both'
+**=> Merge 3 Data frames into Data frame 'yX_both'**
 
      !-------------------------------------!
      !  yX_both             2 + 79 columns !
@@ -262,14 +262,14 @@ Technically, we combine **Activity**, **Subject** and **Feature data** into a si
      !-------------------------------------!
 
 
-## **Tidy data** into 'tidy', phase-3. New data
+## **Tidy data** into 'tidy'
 
 In this phase we squeeze the data set from 10299 rows to 180. We do this by aggregating / summing. We create an independent **tidy data** set **'tidy'** with the a) *average* of each variable for b) each activity and c) each subject.
 
 Actually, the tidy data set contains actually only 35 rows (far less than 180) as subject are taking part only in one or two activities.
 So, rows with missing (NA) aggregates are dropped / non existing. 
 
-=> Aggregate Data frame 'yX_both' into Data frame 'tidy' 
+**=> Aggregate Data frame 'yX_both' into Data frame 'tidy'**
 
      !-------------------------------------!
      !  tidy                2 + 79 columns !
