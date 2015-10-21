@@ -14,7 +14,7 @@
 # By PaavoT
 # ============================================================================
 
-#setwd("D:/coursera/R/getdata-012 project")
+#setwd("D:/coursera/R/getdata-012 project/Github/Getting-and-Cleaning-Data-Course-Project")
 
 #URL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 #setInternet2(use = TRUE) # https requirement on Windows
@@ -34,7 +34,7 @@ library(data.table)
 # ---------------------
 # SUBJECT into data frame 'subject_both'
 #    - Combine files "subject_train.txt" and "subject_test.txt"
-#    - Rename column to a descriptive variable name 'subject'.
+#    - Rename the column to a descriptive variable name 'subject'.
 # ---------------------
 
 # Combine files "subject_train.txt" and "subject_test.txt"
@@ -71,7 +71,7 @@ y_both <- as.factor(y_both$V2)
 str(y_both)
 
 # ---------------------
-# FEATURE DATA into data frame 'X_both'
+# FEATURE DATA (measures) into data frame 'X_both'
 #    - Combine files "X_train.txt" and "X_test.txt"
 #    - Use descriptive variable names in the features (names are derived from "features.txt")
 # ---------------------
@@ -160,6 +160,8 @@ setDF(tidy)
 
 # Produce the result file 'tidy_data_set.txt'.
 write.table(tidy, file= "tidy_data_set.txt", sep="\t", row.names = FALSE)
+
+str(tidy)
 
 # ============================================================================
 # PLEASE NOTE
