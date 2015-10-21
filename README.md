@@ -26,9 +26,9 @@ contains also rows with NAs (or maybe zeros) feature measures.
 
 ## **Activity labels** into data frame 'activity_labels'
 
-**Activity labels** are found in the file "features_info.txt" and they serve as mapping from numeric codes (1-6) to text information. The numeric code is used in files "y_train.txt" and "y_test.txt".
+**Activity labels** are found in the file "activity_labels.txt" and they serve as mapping from numeric codes (1-6) to text information (laying, sitting, standing, walking, walking downstairs, or walking upstairs). The numeric code is used in files "y_train.txt" and "y_test.txt".
 
-**Action:** Subjects are read from "features_info.txt" and are used in the next step.
+**Action:** Activity labels are read from "activity_labels.txt" and are used in the next step.
 
 ## **Activity** into data frame 'y_both'
 
