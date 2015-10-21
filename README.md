@@ -21,7 +21,7 @@ contains also rows with NAs (or maybe zeros) feature measures.
 
 **Subjects** are the people (coded with numbers 1-30) that take part in various activities (laying, sitting, standing, walking, walking downstairs, or walking upstairs) and their movements are being measured by various features.
 
-**Action:** Subjects are combined from files "subject_train.txt" and "subject_test.txt" (and the column is renamed to a descriptive variable name 'subject').
+**Action:** Subjects *for each observation* are combined from files "subject_train.txt" and "subject_test.txt" (and the column is renamed to a descriptive variable name 'subject').
 
 
 ## **Activity labels** into data frame 'activity_labels'
@@ -30,18 +30,19 @@ contains also rows with NAs (or maybe zeros) feature measures.
 
 **Action:** Activity labels are read from "activity_labels.txt" and are used in the next step.
 
+
 ## **Activity** into data frame 'y_both'
 
-**Activity** contains feature measurements.
+**Activity** contains codes (1-6).
 
-**Action:** Activities are combined from  files "y_train.txt" and "y_test.txt". These measurements are given descriptive activity names, that is, names are merged from 'activity_labels'.
+**Action:** Activities *for each observation* are combined from  files "y_train.txt" and "y_test.txt". These measurements are given **descriptive activity names**, that is, names are merged from 'activity_labels'.
 
 
 ## **Feature data** (measures) into data frame 'X_both'
 
 **Feature data** is almost the complete data set: it contains all the feature measurements and and all the observations (but not yet the subject nor activity).
 
-**Action:** Feature data is constructed by combining files "X_train.txt" and "X_test.txt"
+**Action:** Feature data *for each observation*  is constructed by combining files "X_train.txt" and "X_test.txt"
 
 We use descriptive variable names in the features. The names are read from "features.txt" and processed to contain only alpha-numeric characters (to be better used as R variables).
 
