@@ -16,8 +16,8 @@
 
 There are two *auxiliary* files
 
- - "activity_labels.txt" -- 
- - "features.txt" --
+ - "activity_labels.txt" -- activity codes and correcponding text.
+ - "features.txt" -- feature names. Used to name data frame 'X_both' columns.
 
 and six *actual* data files
 
